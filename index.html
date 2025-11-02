@@ -1186,5 +1186,66 @@ SECCIÓN: RECOMENDACIONES — Ficha interactiva con pestañas + checklist + prog
   });
 })();
 </script>
+    <style>
+/* ====== FIX MÓVIL: forzar tema claro y anular fondos oscuros ====== */
+
+/* 1) Indica a los navegadores que esta página usa esquema claro */
+:root { color-scheme: light; }
+
+/* 2) Fondo base claro siempre (evita “pantallas negras” en móvil) */
+html, body { background: #ffffff !important; }
+
+/* 3) Asegura fondos claros en wrappers comunes (por si tu main.css los oscurece) */
+.wrapper,
+.wrapper.style1,
+.wrapper.style2,
+.wrapper.special {
+  background: #ffffff !important;
+  color: #111 !important;
+}
+
+/* 4) Secciones de esta página que estaban cambiando a oscuro en móvil */
+#banner.hero { background-color: #000; } /* mantiene el hero con imagen+overlay */
+#causas,
+#familiograma,
+#recs-hereditarios {
+  background: #ffffff !important;
+  color: #111 !important;
+  --bg: #ffffff !important;
+  --bd: rgba(0,0,0,.12) !important;
+  --muted: #6b7280 !important;
+}
+
+/* Tarjetas y contenedores internos */
+#causas .cx-card,
+#familiograma .fam-card,
+#recs-hereditarios .rec-panel,
+#recs-hereditarios .rec-nav,
+#recs-hereditarios .tabpanel,
+#recs-hereditarios .rec-toolbar {
+  background: #ffffff !important;
+  border-color: rgba(0,0,0,.12) !important;
+  color: #111 !important;
+}
+
+/* Tooltips/overlays del familiograma */
+.pg-tip { background: #fff !important; color: #111 !important; }
+.pg-tip .pg-tip-arrow {
+  background: #fff !important;
+  border-color: rgba(0,0,0,.12) !important;
+}
+
+/* 5) En dark-mode del SO, seguimos forzando claros en estas secciones */
+@media (prefers-color-scheme: dark) {
+  body, .wrapper, .wrapper.style1, .wrapper.style2, .wrapper.special {
+    background: #ffffff !important; color: #111 !important;
+  }
+  #causas, #familiograma, #recs-hereditarios { background: #ffffff !important; color:#111 !important; }
+  #recs-hereditarios .rec-source { background:#f6f8fc !important; color:#0d6efd !important; border-color: rgba(0,0,0,.12) !important; }
+  /* Mantén textos del hero en blanco para contraste sobre la imagen */
+  #banner .hero-title, #banner .hero-subtitle, #banner .notice { color: #fff !important; }
+}
+</style>
+
 </body>
 </html>
