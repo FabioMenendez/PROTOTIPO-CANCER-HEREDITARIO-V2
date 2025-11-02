@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Proyecto Cáncer Hereditario: causas, detección, tratamiento y prevención." />
+  <title>Inicio — Proyecto Cáncer Hereditario</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos del proyecto (te paso el CSS al final del proceso) -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header" class="reveal">
+    <div class="inner d-flex align-items-center justify-content-between gap-3">
+      <h1 class="m-0">
+        <a href="index.html" aria-label="Inicio">Nombre del Sitio <span>— Proyecto</span></a>
+      </h1>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- Menú lateral derecho -->
+  <nav id="menu" class="offcanvas offcanvas-right" aria-label="Menú principal" aria-hidden="true">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title m-0">Menú</h2>
+      <button class="offcanvas-close" aria-label="Cerrar">×</button>
+    </div>
+    <ul class="links" role="menu">
+      <li role="none"><a role="menuitem" href="index.html" aria-current="page">Inicio</a></li>
+      <li role="none"><a role="menuitem" href="quienes-somos.html">Quiénes Somos</a></li>
+      <li role="none"><a role="menuitem" href="contacto.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+  <div id="offcanvasBackdrop" class="offcanvas-backdrop" hidden></div>
+
+
+<!-- Hero / Banner con imagen de fondo -->
+<section id="banner" class="hero hero-image"
+  style="background-image:
+    linear-gradient(180deg, rgba(49, 49, 49, 0.55), rgba(49, 49, 49, 0.55)),
+    url('images/PORTADA.webp');">
+  <div class="inner" style="text-align:center">
+    <header>
+      <h1 class="hero-title">CÁNCER HEREDITARIO</h1>
+      <p class="hero-subtitle">
+        Es una condición hereditaria que aumenta el riesgo de desarrollar cáncer, debido a cambios en los genes
+        que normalmente nos protegen de esta enfermedad.
+      </p>
+    </header>
+
+    <div class="notice notice-amber">
+      <strong>Importante:</strong> Mayor riesgo de desarrollar cáncer no implica necesariamente que la enfermedad aparezca.
+    </div>
+
+    <a href="#main" class="button big ghost-light">Ver más</a>
+  </div>
+</section>
+
+  <main id="main">
+    <!-- Causas -->
+    <!-- ==========================
+<!-- ==========================
+CAUSAS — versión final corregida (sin emojis, con imágenes laterales funcionales)
+=========================== -->
+<section id="causas" class="wrapper style1 reveal">
+  <div class="inner">
+    <header class="align-center">
+<h2>Causas genéticas de los síndromes de cáncer hereditario</h2>
+<p class="muted">Alteraciones en genes que regulan el crecimiento, la reparación y la muerte celular.</p>
+
+    </header>
+
+    <!-- Introducción -->
+    <div class="cx-intro">
+      Los síndromes de cáncer hereditario se originan por alteraciones en un conjunto de
+      <button type="button" class="cx-chip" id="genesChip">genes</button>
+      que regulan el crecimiento, la división y la reparación celular.
+    </div>
+
+    <!-- Selector de categorías -->
+    <div class="cx-pills" role="tablist" aria-label="Tipos de genes relacionados">
+      <button class="cx-pill is-active" data-target="panel-sup" role="tab">Supresores de tumores</button>
+      <button class="cx-pill" data-target="panel-proto" role="tab">Protooncogenes</button>
+      <button class="cx-pill" data-target="panel-rep" role="tab">Reparadores de ADN</button>
+    </div>
+
+    <!-- Paneles -->
+    <div class="cx-panels">
+      <!-- Supresores -->
+      <section class="cx-panel is-active" id="panel-sup" role="tabpanel">
+        <div class="cx-card">
+          <figure class="cx-media">
+            <img src="images/Supresores.jpg" alt="Supresores de tumores">
+            <figcaption>Detienen el ciclo celular ante daño genético.</figcaption>
+          </figure>
+          <div class="cx-text">
+            <h3>Genes supresores de tumores</h3>
+            <p>Funcionan como “frenos” del crecimiento: detienen la división celular cuando el ADN está dañado. Si se alteran, <strong>pierden su rol protector</strong> y permiten el desarrollo de tumores.</p>
+            <div class="cx-badges">
+              <span class="cx-badge">BRCA1</span>
+              <span class="cx-badge">BRCA2</span>
+              <span class="cx-badge">TP53</span>
+              <span class="cx-badge">APC</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Protooncogenes -->
+      <section class="cx-panel" id="panel-proto" role="tabpanel">
+        <div class="cx-card">
+          <figure class="cx-media">
+            <img src="images/Reduccion.jpg" alt="Protooncogenes">
+            <figcaption>Activan las señales de crecimiento celular.</figcaption>
+          </figure>
+          <div class="cx-text">
+            <h3>Protooncogenes</h3>
+            <p>Actúan como “aceleradores” del crecimiento celular. Cuando sufren mutaciones, pueden <strong>hiperactivarse</strong> y producir una división descontrolada, favoreciendo la formación del cáncer.</p>
+            <div class="cx-badges">
+              <span class="cx-badge">RET</span>
+              <span class="cx-badge">MET</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reparadores -->
+      <section class="cx-panel" id="panel-rep" role="tabpanel">
+        <div class="cx-card">
+          <figure class="cx-media">
+            <img src="images/quimioprevención.jpeg" alt="Genes reparadores de ADN">
+            <figcaption>Corrigen errores en el ADN dañado.</figcaption>
+          </figure>
+          <div class="cx-text">
+            <h3>Genes reparadores de ADN</h3>
+            <p>Corrigen los errores que ocurren cuando el ADN se copia durante la división celular. Si fallan, <strong>las mutaciones se acumulan</strong> y aumenta el riesgo de cáncer hereditario.</p>
+            <div class="cx-badges">
+              <span class="cx-badge">MLH1</span>
+              <span class="cx-badge">MSH2</span>
+              <span class="cx-badge">MSH6</span>
+              <span class="cx-badge">PMS2</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="cx-note">
+      <strong>Importante:</strong> estas variantes genéticas pueden heredarse o no, y su transmisión puede seguir <em>patrones mendelianos o no mendelianos</em> según el tipo de gen.
+    </div>
+  </div>
+</section>
+
+<!-- Popup de definición de "genes" -->
+<div id="genesPopup" class="cx-overlay" hidden>
+  <div class="cx-pop" role="dialog" aria-modal="true">
+    <button class="cx-pop-close" aria-label="Cerrar">✕</button>
+    <h3>Genes</h3>
+    <p>Los genes son las unidades mínimas de información hereditaria. Contienen fragmentos de ADN que codifican proteínas responsables de las funciones del organismo.</p>
+    <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gene" target="_blank" rel="noopener" class="cx-pop-link">Ver más</a>
+  </div>
+</div>
+
+<!-- ==========================
+ESTILOS
+=========================== -->
+<style>
+#causas {
+  --stroke: rgba(0,0,0,.1);
+  --muted: #6b7280;
+  --bg: #f9f9f9;
+  --ink: #0d6efd;
+}
+@media (prefers-color-scheme: dark) {
+  #causas { --stroke: rgba(255,255,255,.15); --muted: #a6adbb; --bg: #111; --ink: #69a7ff; }
+}
+
+/* Intro */
+.cx-intro {
+  background: var(--bg);
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Chip */
+.cx-chip {
+  border: 1px solid var(--stroke);
+  background: #e9ecef;
+  border-radius: 999px;
+  padding: .25rem .7rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cx-chip:hover { box-shadow: 0 0 0 .15rem rgba(13,110,253,.25); }
+
+/* Píldoras */
+.cx-pills {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: .3rem;
+  background: var(--bg);
+  margin-bottom: 1rem;
+}
+.cx-pill {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  transition: .2s;
+}
+.cx-pill.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* Paneles */
+.cx-panel { display: none; }
+.cx-panel.is-active { display: block; animation: fadeIn .3s ease; }
+
+@keyframes fadeIn { from {opacity: 0; transform: translateY(5px);} to {opacity: 1; transform: none;} }
+
+/* Tarjetas */
+.cx-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  background: #fff;
+  padding: 1rem;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark) {
+  .cx-card { background: #1b1b1b; }
+}
+.cx-media {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.cx-media img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+.cx-media figcaption {
+  font-size: .85rem;
+  color: var(--muted);
+  margin-top: .3rem;
+}
+.cx-text {
+  flex: 1 1 55%;
+}
+.cx-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .5rem;
+}
+.cx-badge {
+  padding: .25rem .55rem;
+  border-radius: .5rem;
+  border: 1px solid var(--stroke);
+  background: var(--bg);
+}
+
+/* Nota */
+.cx-note {
+  margin-top: 1rem;
+  border: 1px dashed var(--stroke);
+  border-radius: 12px;
+  padding: .8rem 1rem;
+  background: var(--bg);
+}
+
+/* Popup genes */
+.cx-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.cx-pop {
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  max-width: 450px;
+  position: relative;
+}
+.cx-pop-close {
+  position: absolute;
+  top: .4rem;
+  right: .6rem;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.cx-pop-link {
+  display: inline-block;
+  margin-top: .5rem;
+  border: 1px solid var(--stroke);
+  border-radius: .4rem;
+  padding: .35rem .6rem;
+  background: #f8f9fa;
+  text-decoration: none;
+}
+</style>
+
+<!-- ==========================
+JS — Tabs + Popup corregido
+=========================== -->
+<script>
+(function(){
+  // Tabs
+  const tabs = document.querySelectorAll('.cx-pill');
+  const panels = document.querySelectorAll('.cx-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.dataset.target;
+      tabs.forEach(t => t.classList.remove('is-active'));
+      panels.forEach(p => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      document.getElementById(targetId).classList.add('is-active');
+    });
+  });
+
+  // Popup genes
+  const chip = document.getElementById('genesChip');
+  const pop = document.getElementById('genesPopup');
+  const close = pop.querySelector('.cx-pop-close');
+  chip.addEventListener('click', ()=>{ pop.hidden = false; document.body.style.overflow = 'hidden'; });
+  close.addEventListener('click', ()=>{ pop.hidden = true; document.body.style.overflow = ''; });
+  pop.addEventListener('click', e=>{ if(e.target===pop){ pop.hidden = true; document.body.style.overflow=''; }});
+})();
+</script>
+
+
+<!-- ==========================
+SECCIÓN: FAMILIOGRAMA (Versión sin “X” en los cuadros)
+=========================== -->
+<section id="familiograma" class="wrapper style2 reveal">
+  <div class="inner">
+    <header class="align-center">
+      <h2>El Familiograma</h2>
+      <p class="fam-intro">
+        Representa gráficamente el historial de enfermedades relevantes que se presentan en una familia,
+        especialmente en aquellas con posible componente genético, como el cáncer hereditario.
+      </p>
+    </header>
+
+    <!-- Imagen centrada con hotspots -->
+    <figure class="fam-figure" aria-labelledby="pg-cap">
+      <div class="pg-figure" id="pgFigure">
+        <img id="pgImg" class="pg-img"
+             src="images/familiograma-ejemplo1.png"
+             alt="Familiograma con casos de cáncer de próstata, estómago, endometrio/útero y mama">
+
+        <!-- Hotspots -->
+        <button class="pg-spot spot-prostata"  style="left:9%;   top:23%;" data-info="Cáncer de próstata (varón). Registrar edad y diagnóstico."></button>
+        <button class="pg-spot spot-estomago"  style="left:26%;  top:18%;" data-info="Cáncer gástrico, 60 años."></button>
+        <button class="pg-spot spot-endometrio" style="left:13%; top:42%;" data-info="Cáncer endometrial/uterino, 46 años."></button>
+        <button class="pg-spot spot-mama"      style="right:8%; top:42%;" data-info="Cáncer de mama, 59 años."></button>
+
+      </div>
+      <figcaption id="pg-cap" class="pg-help">
+        Presione los puntos para ver la información. 
+      </figcaption>
+    </figure>
+
+    <!-- Condiciones -->
+    <article class="fam-card">
+      <h3>Condiciones para su elaboración</h3>
+      <ul class="fam-lista">
+        <li>Se grafica mínimo tres generaciones: abuelos, padres e hijos.</li>
+        <li>Los símbolos estandarizados:
+          <ul>
+            <li>◯ <em>Círculo</em> = mujer</li>
+            <li>▢ <em>Cuadrado</em> = varón</li>
+            <li>/ <em>Línea diagonal</em> = persona fallecida</li>
+            <li>◯/▢ <em>Sombreado o coloreado</em> = persona afectada por cáncer</li>
+          </ul>
+        </li>
+        <li>Se anota:
+          <ul>
+            <li>Tipo de cáncer.</li>
+            <li>Edad actual o edad al fallecimiento.</li>
+          </ul>
+        </li>
+      </ul>
+      <p class="fam-note">
+        El familiograma permite visualizar relaciones familiares y detectar patrones de transmisión genética,
+        facilitando el asesoramiento preventivo.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+#familiograma{ --bd:rgba(0,0,0,.12); --ink:#0d6efd; --text:#222; }
+.fam-intro{ max-width:850px; margin:.5rem auto 1.5rem; font-size:1.05rem; line-height:1.6; color:var(--text); }
+
+/* Figura centrada */
+.fam-figure{ text-align:center; margin:0 auto 1.5rem; max-width:1000px; }
+.pg-figure{ position:relative; border:1px solid var(--bd); border-radius:12px;
+  overflow:hidden; background:#fff; box-shadow:0 6px 14px rgba(0,0,0,.08); display:inline-block;
+}
+.pg-img{ width:100%; height:auto; display:block; }
+.pg-help{ text-align:center; color:#666; margin-top:.5rem; font-size:.95rem; }
+
+/* Hotspots */
+.pg-spot{ position:absolute; width:20px; height:20px; border:2px solid #fff; border-radius:50%;
+  cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,.28); transition:transform .15s ease;
+}
+.pg-spot:hover{ transform:scale(1.2); }
+.spot-prostata { background:#22c55e } 
+.spot-estomago { background:#6b7280 } 
+.spot-endometrio{ background:#ef4444 } 
+.spot-mama     { background:#a3a06b }
+
+/* Tooltip */
+.pg-tip{
+  position:fixed;
+  z-index:9999;
+  background:#fff;
+  color:#111;
+  border:1px solid rgba(0,0,0,.12);
+  border-radius:10px;
+  box-shadow:0 10px 28px rgba(0,0,0,.25);
+  padding:.7rem .9rem;
+  max-width:min(320px, 92vw);
+  font:14px/1.35 system-ui,Arial;
+  opacity:0;
+  transform:translateY(-4px);
+  pointer-events:none;
+  transition:opacity .12s ease, transform .12s ease;
+}
+.pg-tip.is-open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+.pg-tip .pg-tip-arrow{ position:absolute; width:12px; height:12px; background:#fff;
+  border-left:1px solid rgba(0,0,0,.12); border-top:1px solid rgba(0,0,0,.12); transform:rotate(45deg);
+}
+.pg-tip[data-side="top"] .pg-tip-arrow{ bottom:-6px; left:calc(50% - 6px); }
+.pg-tip[data-side="bottom"] .pg-tip-arrow{ top:-6px; left:calc(50% - 6px); transform:rotate(225deg); }
+
+
+/* Texto condiciones */
+.fam-card{ background:#fff; border:1px solid var(--bd); border-radius:12px; padding:1.5rem; box-shadow:0 6px 12px rgba(0,0,0,.08); margin-top:1rem; }
+.fam-lista ul{ margin:.4rem 0 0 1.2rem; list-style:disc; }
+.fam-note{ margin-top:.8rem; border-left:4px solid var(--ink); padding-left:.8rem; font-size:.97rem; color:#333; }
+</style>
+
+<script>
+/* === TOOLTIP INTERACTIVO SIN "X" === */
+(function(){
+  const spots = Array.from(document.querySelectorAll('.pg-spot'));
+  if(!spots.length) return;
+
+  const tip = document.createElement('div');
+  tip.className = 'pg-tip';
+  tip.innerHTML = `<div class="pg-tip-body"></div><i class="pg-tip-arrow" aria-hidden="true"></i>`;
+  document.body.appendChild(tip);
+
+  const tipBody = tip.querySelector('.pg-tip-body');
+  let current = null;
+
+  function closeTip(){
+    tip.classList.remove('is-open');
+    tip.removeAttribute('data-side');
+    current?.setAttribute('aria-expanded','false');
+    current = null;
+  }
+
+  function clamp(v, min, max){ return Math.max(min, Math.min(max, v)); }
+
+  function openTip(btn){
+    current = btn;
+    tipBody.textContent = btn.getAttribute('data-info');
+    btn.setAttribute('aria-expanded','true');
+
+    tip.style.visibility = 'hidden';
+    tip.classList.add('is-open');
+    tip.style.left = '0'; tip.style.top = '0';
+    const pad = 10;
+    const tRect = tip.getBoundingClientRect();
+    const bRect = btn.getBoundingClientRect();
+    const vw = window.innerWidth, vh = window.innerHeight;
+
+    let side = 'top';
+    let x = bRect.left + bRect.width/2 - tRect.width/2;
+    let y = bRect.top - tRect.height - 12;
+
+    if(y < pad){
+      const y2 = bRect.bottom + 12;
+      if(y2 + tRect.height + pad <= vh){ side='bottom'; y=y2; }
+    }
+    x = clamp(x, pad, vw - tRect.width - pad);
+    y = clamp(y, pad, vh - tRect.height - pad);
+    tip.setAttribute('data-side', side);
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+    tip.style.visibility = 'visible';
+  }
+
+  spots.forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      e.stopPropagation();
+      if(current===btn){ closeTip(); return; }
+      openTip(btn);
+    });
+  });
+
+  document.addEventListener('click', e=>{ if(!tip.contains(e.target)) closeTip(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeTip(); });
+})();
+
+
+</script>
+
+
+    
+
+   
+<!-- ==========================
+SECCIÓN: RECOMENDACIONES — Ficha interactiva con pestañas + checklist + progreso
+=========================== -->
+<section id="recs-hereditarios" class="wrapper reveal">
+  <div class="inner">
+    <header class="align-center">
+      <h2>Recomendaciones para los síndromes más comunes de cáncer hereditario</h2>
+      <p class="rec-intro">Selecciona un síndrome. Navega por sus pestañas sin saturar la lectura. Marca lo revisado y sigue tu progreso. Al final encontrarás los enlaces como “Ver más”.</p>
+    </header>
+
+    <div class="rec-layout" data-rec>
+      <!-- Menú lateral / carrusel -->
+      <nav class="rec-nav" aria-label="Síndromes">
+        <button class="rec-nav-btn is-active" data-target="mama" aria-controls="rec-panel" aria-selected="true">Cáncer de mama</button>
+        <button class="rec-nav-btn" data-target="ovario" aria-controls="rec-panel" aria-selected="false">Cáncer de ovario/trompas</button>
+        <button class="rec-nav-btn" data-target="lynch" aria-controls="rec-panel" aria-selected="false">Síndrome de Lynch</button>
+        <button class="rec-nav-btn" data-target="tiroides" aria-controls="rec-panel" aria-selected="false">Cáncer de tiroides</button>
+        <button class="rec-nav-btn" data-target="pancreas" aria-controls="rec-panel" aria-selected="false">Cáncer de páncreas</button>
+        <button class="rec-nav-btn" data-target="prostata" aria-controls="rec-panel" aria-selected="false">Cáncer de próstata</button>
+      </nav>
+
+      <!-- Panel dinámico -->
+      <article id="rec-panel" class="rec-panel" role="region" aria-live="polite" aria-label="Contenido de recomendaciones">
+        <!-- Se inyecta por JS -->
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ------------ Variables y base ------------ */
+#recs-hereditarios{
+  --bd:rgba(0,0,0,.12);
+  --ink:#0d6efd;
+  --text:#1f2937;
+  --chip:#0c275a;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --tab:#f4f7fb;
+  --acc:#e9f0ff;
+}
+.rec-intro{
+  max-width:900px; margin:.5rem auto 1.4rem;
+  font-size:1.04rem; line-height:1.7; color:#344053;
+}
+
+/* ------------ Layout ------------ */
+.rec-layout{ display:grid; grid-template-columns: 300px 1fr; gap:1rem; align-items:start; }
+@media (max-width: 980px){ .rec-layout{ grid-template-columns:1fr; } }
+
+/* ------------ Menú lateral ------------ */
+.rec-nav{
+  position:sticky; top:1rem;
+  display:flex; flex-direction:column; gap:.6rem;
+  border:1px solid var(--bd); border-radius:14px; padding:.6rem; background:#fff;
+  box-shadow:0 6px 14px rgba(0,0,0,.06);
+}
+@media (max-width: 980px){
+  .rec-nav{ flex-direction:row; overflow:auto; white-space:nowrap; }
+}
+.rec-nav-btn{
+  display:block; border:1px solid transparent; background:#f6f8fb; color:var(--chip);
+  padding:.7rem .85rem; border-radius:12px; cursor:pointer; font:600 .98rem/1.2 system-ui,Segoe UI,Arial;
+}
+.rec-nav-btn:hover{ background:#eef2f9; }
+.rec-nav-btn.is-active{ border-color:var(--ink); background:#eaf2ff; }
+
+/* ------------ Panel contenedor ------------ */
+.rec-panel{
+  border:1px solid var(--bd); border-radius:14px; background:var(--bg);
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
+}
+.rec-panel-inner{ padding:1rem; }
+
+/* ------------ Cabecera + imagen HERO ------------ */
+.rec-head{ display:block; }
+.rec-title{ margin:.2rem 0 .8rem; font:700 1.35rem/1.2 system-ui,Segoe UI,Arial; color:#0c275a; }
+
+.rec-hero{
+  position:relative; width:100%; border-radius:16px; overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.1);
+  background:#f2f5fb; margin:0 0 1rem;
+}
+.rec-hero img{
+  width:100%; height: clamp(220px, 30vw, 360px);
+  object-fit:cover; display:block; transform:scale(1.02); transition: transform .35s ease;
+}
+.rec-hero:hover img{ transform:scale(1.06); }
+
+/* ------------ Barra de progreso + toolbar ------------ */
+.rec-toolbar{
+  display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+  padding:.6rem .6rem; border:1px solid var(--bd); border-radius:12px; background:#f9fbff; margin:.2rem 0 1rem;
+}
+.rec-progress{
+  flex:1;
+  height:10px; background:#eef2f9; border-radius:999px; overflow:hidden;
+}
+.rec-progress > span{
+  display:block; height:100%; width:0%; background:linear-gradient(90deg,#4f80ff,#0d6efd);
+  transition:width .25s ease;
+}
+.rec-ops{ display:flex; gap:.4rem; }
+.rec-btn{
+  border:1px solid var(--bd); background:#f6f8fb; color:#0c275a;
+  border-radius:10px; padding:.4rem .7rem; cursor:pointer; font-weight:600;
+}
+.rec-btn:hover{ background:#eef2f9; }
+
+/* ------------ Pestañas internas ------------ */
+.tabbar{
+  display:flex; gap:.4rem; flex-wrap:wrap; margin:.3rem 0 0;
+}
+.tabbtn{
+  border:1px solid var(--bd); background:var(--tab); color:#0c275a;
+  padding:.45rem .7rem; border-radius:10px; cursor:pointer; font-weight:600;
+}
+.tabbtn.is-active{ background:var(--acc); border-color:var(--ink); }
+.tabbtn:hover{ filter:brightness(0.98); }
+
+/* ------------ Área de contenido por pestaña ------------ */
+.tabpanel{
+  border:1px solid var(--bd); border-radius:12px; background:#fff;
+  margin:.75rem 0; padding:1rem; box-shadow:0 10px 18px rgba(0,0,0,.04);
+}
+.tab-title{ margin:.1rem 0 .6rem; font:600 1.02rem/1.2 system-ui,Segoe UI,Arial; color:#0c275a; }
+.tab-body{
+  /* Lectura cómoda */
+  max-width: 72ch; font-size:1.02rem; line-height:1.8; color:var(--text);
+}
+.tab-body p{ margin:.2rem 0 .9rem; }
+.tab-body ul{ margin:.3rem 0 1rem 1.25rem; }
+.tab-body li{ margin:.2rem 0 .4rem; }
+
+/* ------------ Checklist por pestaña ------------ */
+.chk{
+  display:flex; align-items:flex-start; gap:.55rem; margin:.6rem 0 .2rem;
+  user-select:none;
+}
+.chk input{ margin-top:.25rem; transform:scale(1.1); }
+.chk label{ cursor:pointer; color:var(--muted); }
+
+/* ------------ “Ver más” (fuentes) ------------ */
+.rec-sources{
+  display:flex; flex-wrap:wrap; gap:.6rem;
+  border-top:1px dashed var(--bd); margin-top:1.2rem; padding-top:1rem;
+}
+.rec-sources h4{ font-size:1rem; margin:0 .3rem 0 0; color:#5b6876; align-self:center; font-weight:600; }
+.rec-source{
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.5rem .8rem; border:1px solid var(--bd); border-radius:10px;
+  text-decoration:none; color:var(--ink); background:#f6f8fc; font-weight:600;
+}
+.rec-source:hover{ background:#eef2f9; }
+
+/* ------------ Modo oscuro ------------ */
+@media (prefers-color-scheme:dark){
+  #recs-hereditarios{
+    --text:#e9eef6; --bg:#111317; --bd:rgba(255,255,255,.16);
+    --tab:#0f1116; --acc:#0f213f; --muted:#c8d0de;
+  }
+  .rec-nav, .rec-panel{ background:#111317; border-color:var(--bd); }
+  .rec-nav-btn{ background:#0f1116; color:#e9eef6; }
+  .rec-nav-btn.is-active{ background:#0f213f; border-color:#2f64ff; }
+  .rec-title{ color:#cfe0ff; }
+  .tabpanel{ background:#111317; }
+  .rec-toolbar{ background:#0f1116; }
+  .rec-source{ background:#0f1116; border-color:var(--bd); color:#7aa2ff; }
+}
+</style>
+
+<script>
+/* —— Datos TAL CUAL —— */
+(function(){
+  const DATA = {
+    mama: {
+      title: 'Cáncer de mama',
+      img: 'images/CM.webp',
+      tabs: [
+        { k:'vigilancia', t:'Vigilancia', html: `
+          <p>Autoexploración mensual. Implica conocer el aspecto y textura normales de tus mamas. Reportar cualquier cambio (bulto, secreción, retracción, piel diferente) al médico a cargo. Si continúa en edad fértil, idealmente realizar cuando el periodo casi finaliza.</p>
+        `},
+        { k:'examenes', t:'Exámenes auxiliares', html: `
+          <p>Mamografía de tamizaje: Usa bajas dosis de rayos X para evaluar la mama, un radiólogo al revisará las imágenes. Si hay hallazgos sospechosos, se realiza una mamografía diagnóstica con imágenes más detalladas.</p>
+          <p>Resonancia magnética de mama: Se recomienda en personas con genes alterados de alto riesgo (BRCA1/2, TP53, etc.).</p>
+        `},
+        { k:'cirugia', t:'Cirugía reductora de riesgo', html: `
+          <p>Mastectomía bilateral profiláctica: consiste en extraer ambas mamas para disminuir el riesgo de cáncer en un futuro, pero debe evaluarse según el contexto clínico, psicológico y familiar.</p>
+        `},
+        { k:'quimioprev', t:'Quimioprevención', html: `
+          <p>Premenopausia: Tamoxifeno, es mayormente usado y reduce la cantidad de estrógeno en el cuerpo, típicamente se indica 20mg durante 5 años.</p>
+          <p>Postmenopausia: raloxifeno, normalmente se prescribe 60mg durante 5 años.</p>
+        `}
+      ],
+      links: [{ href:'https://www.nccn.org/patients/guidelines/content/PDF/genetics-patient.pdf', label:'Ver más' }]
+    },
+    ovario: {
+      title: 'Cáncer de ovario/trompas',
+      img: 'images/CO.jpg',
+      tabs: [
+        { k:'general', t:'General', html: `
+          <p>La mayoría de los cánceres de ovario comienzan en las trompas de Falopio, no directamente en el ovario.</p>
+          <p>No hay tamizaje efectivo (CA-125 y ecografía transvaginal no disminuyen mortalidad, se usan sólo en investigación o vigilancia estrecha).</p>
+        `},
+        { k:'cirugia', t:'Cirugía reductora', html: `
+          <p>Salpingooforectomía reductora de riesgo: extracción de ovarios y trompas de Falopio para reducir el riesgo de padecer cáncer. Indicado en alteraciones de los genes BRCA1, BRCA2, BRIP1, RAD51C y RAD51D, opcional en otros casos.</p>
+          <p>Si la paciente es premenopáusica, se debe consultar con un especialista debido a la menopausia quirúrgica.</p>
+        `},
+        { k:'menop', t:'Menopausia quirúrgica', html: `
+          <p>Extirpar los ovarios antes de la menopausia causa una caída brusca del estrógeno y se expresa en síntomas como:</p>
+          <ul>
+            <li>Sofocos, sudoración nocturna, insomnio, cambios de humor, sequedad vaginal, cambios cognitivos, aumento de peso.</li>
+          </ul>
+          <p>Asimismo, puede estar asociada a mayor riesgo a largo plazo para enfermedades cardiovasculares y osteoporosis.</p>
+        `},
+        { k:'otras', t:'Otras consideraciones', html: `
+          <p>Histerectomía: Se añade a la salpingooforectomía acientes con alteraciones en BRCA1/2 pueden tener mayor riesgo de cáncer uterino seroso.</p>
+          <p>Salpingectomía reductora de riesgo: consiste en extirpar solo las trompas de Falopio, preservando los ovarios. Puede ser una opción para mujeres premenopáusicas que no desean la menopausia.</p>
+          <p>Este tratamiento no es un estándar en el manejo de pacientes con riesgo de cáncer hereditario, porque no existe evidencia concluyente. Aquellos pacientes con alto riesgo de cáncer, la salpingooforectomía reductora de riesgo es la recomendada en estos casos.</p>
+          <p>Si deseas quedar embarazada en el futuro, solo necesitas conservar el útero y congelar óvulos o embriones, ya que los ovarios y las trompas de Falopio no son necesarios.</p>
+        `},
+      ],
+      links: [{ href:'https://www.nccn.org/patients/guidelines/content/PDF/genetics-patient.pdf', label:'Ver más' }]
+    },
+    lynch: {
+      title: 'Síndrome de Lynch',
+      img: 'images/SY.jpg',
+      tabs: [
+        { k:'vigil', t:'Vigilancia intensiva', html: `
+          <ul>
+            <li>Colonoscopías regulares con intervalos más cortos (cada 1 a 2 años).</li>
+            <li>Comienzo del tamizaje entre los 20 y 25 años, o 2 a 5 años antes del caso más joven de cáncer colorrectal en la familia.</li>
+            <li>En el síndrome de Lynch, se enfatiza la detección temprana mediante colonoscopías de alta calidad con extirpación completa de pólipos.</li>
+          </ul>
+        `},
+        { k:'cirugia', t:'Cirugía profiláctica o terapéutica', html: `
+          <ul>
+            <li>En síndromes de poliposis adenomatosa familiar (FAP), puede recomendarse colectomía profiláctica si hay múltiples pólipos o riesgo alto de malignidad.</li>
+            <li>En síndrome de Lynch, considerar cirugía extendida (colectomía subtotal) en algunos casos de cáncer colorrectal, debido al alto riesgo de recurrencia.</li>
+          </ul>
+          <p>Quimioprevención: Aspirina diaria ha mostrado reducción de riesgo colorrectal, aunque la dosis y duración deben individualizarse.</p>
+        `},
+      ],
+      links: [
+        { href:'https://www.nccn.org/professionals/physician_gls/pdf/colorectal_screening.pdf', label:'Ver más' },
+        { href:'https://www.nccn.org/patients/guidelines/content/PDF/colon-patient.pdf', label:'Ver más' }
+      ]
+    },
+    tiroides: {
+      title: 'Cáncer de tiroides',
+      img: 'images/CT.jpg',
+      tabs: [
+        { k:'prev', t:'Prevención', html: `
+          <h5>Tiroidectomía profiláctica:</h5>
+          <p>Según el codón mutado en RET:</p>
+          <ul>
+            <li>Alto riesgo (MEN2B, codón 918): antes del 1 año de edad.</li>
+            <li>Riesgo moderado (MEN2A, codones 634, 609, 611, etc.): antes de los 5 años.</li>
+          </ul>
+          <p>Seguimiento: calcio sérico y calcitonina periódica.</p>
+          <p>Ecografía tiroidea periódica (cada 1–2 años) desde la infancia o adolescencia.</p>
+        `},
+      ],
+      links: [{ href:'https://www.nccn.org/patients/guidelines/content/PDF/thyroid-patient.pdf', label:'Ver más' }]
+    },
+    pancreas: {
+      title: 'Cáncer de páncreas',
+      img: 'images/CP.png',
+      tabs: [
+        { k:'prev', t:'Prevención', html: `
+          <p>Se recomienda una vigilancia anual con MRCP (resonancia magnética con contraste) o ecografía endoscópica. El inicio del tamizaje depende del gen afectado:</p>
+          <ul>
+            <li>STK11: desde los 30–35 años.</li>
+            <li>CDKN2A: desde los 40 años.</li>
+            <li>ATM o BRCA2: desde los 50 años.</li>
+            <li>BRCA1, MLH1, MSH2, MSH6, EPCAM, PALB2 o TP53: desde los 50 años si existe uno o más parientes de primer o segundo orden con diagnóstico de cáncer o 10 años antes de la edad de diagnóstico de cáncer pancreático en algún pariente en la familia.</li>
+          </ul>
+        `},
+      ],
+      links: [{ href:'https://www.nccn.org/patients/guidelines/content/PDF/genetics-patient.pdf', label:'Ver más' }]
+    },
+    prostata: {
+      title: 'Cáncer de próstata',
+      img: 'images/CPP.webp',
+      tabs: [
+        { k:'prev', t:'Prevención', html: `
+          <h5>Tamizaje temprano:</h5>
+          <p>Antes se usaba también el examen rectal digital (DRE), pero actualmente solo se realiza si es necesario.</p>
+          <p>Antígeno prostático específico (APS): Cuando hay un problema en la próstata, como cáncer, esta puede producir más APS, aumentando sus niveles en sangre; sin embargo, dichos niveles también pueden deberse a otras causas, como hiperplasia prostática o infección urinaria.</p>
+          <p>El PSA es una proteína producida por la próstata que ayuda al movimiento de los espermatozoides en el semen.</p>
+        `},
+      ],
+      links: [{ href:'https://www.nccn.org/patients/guidelines/content/PDF/genetics-patient.pdf', label:'Ver más' }]
+    }
+  };
+
+  const layout = document.querySelector('.rec-layout[data-rec]');
+  if(!layout) return;
+
+  const navBtns = layout.querySelectorAll('.rec-nav-btn');
+  const panel = layout.querySelector('#rec-panel');
+
+  // Render de la ficha del síndrome seleccionado
+  function render(kind){
+    const d = DATA[kind];
+    if(!d) return;
+
+    let html = `
+      <div class="rec-panel-inner">
+        <header class="rec-head">
+          <h3 class="rec-title" tabindex="-1">${d.title}</h3>
+        </header>
+        ${d.img ? `
+          <figure class="rec-hero">
+            <img src="${d.img}" alt="">
+          </figure>` : ''}
+
+        <div class="rec-toolbar">
+          <div class="rec-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+          <div class="rec-ops">
+            <button class="rec-btn" data-act="expand">Expandir todo</button>
+            <button class="rec-btn" data-act="collapse">Contraer todo</button>
+          </div>
+        </div>
+
+        <div class="tabbar" role="tablist" aria-label="Secciones">
+          ${(d.tabs||[]).map((tb,i)=>
+            `<button class="tabbtn ${i===0?'is-active':''}" role="tab" aria-selected="${i===0?'true':'false'}" data-tab="${tb.k}">${tb.t}</button>`
+          ).join('')}
+        </div>
+
+        <div class="tabwrap">
+          ${(d.tabs||[]).map((tb,i)=>`
+            <section class="tabpanel" role="tabpanel" data-panel="${tb.k}" ${i!==0?'hidden':''}>
+              <h4 class="tab-title">${tb.t}</h4>
+              <div class="tab-body">
+                ${tb.html}
+                <div class="chk">
+                  <input id="done-${tb.k}" type="checkbox" data-done="${tb.k}">
+                  <label for="done-${tb.k}">Marcar esta sección como revisada</label>
+                </div>
+              </div>
+            </section>
+          `).join('')}
+        </div>
+
+        ${(d.links && d.links.length)? (`
+          <div class="rec-sources">
+            <h4>Fuentes:</h4>
+            ${d.links.map(l=>`<a class="rec-source" href="${l.href}" target="_blank" rel="noopener">Ver más</a>`).join('')}
+          </div>
+        `):''}
+
+      </div>
+    `;
+
+    panel.innerHTML = html;
+
+    // Accesibilidad: foco al título
+    panel.querySelector('.rec-title')?.focus?.();
+
+    // Tabs
+    const tabBtns = panel.querySelectorAll('.tabbtn');
+    const tabPanels = panel.querySelectorAll('.tabpanel');
+    tabBtns.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const k = btn.dataset.tab;
+        tabBtns.forEach(b=>{ b.classList.toggle('is-active', b===btn); b.setAttribute('aria-selected', b===btn ? 'true':'false'); });
+        tabPanels.forEach(p=> p.hidden = (p.dataset.panel !== k));
+      });
+    });
+
+    // Checklist + progreso
+    const checks = panel.querySelectorAll('[data-done]');
+    const bar = panel.querySelector('.rec-progress > span');
+    const barWrap = panel.querySelector('.rec-progress');
+    function updateProgress(){
+      const total = checks.length;
+      const done = [...checks].filter(c=>c.checked).length;
+      const pct = total ? Math.round(100*done/total) : 0;
+      bar.style.width = pct + '%';
+      barWrap.setAttribute('aria-valuenow', String(pct));
+    }
+    checks.forEach(c=> c.addEventListener('change', updateProgress));
+    updateProgress();
+
+    // Toolbar: expand/collapse/print
+    panel.querySelector('[data-act="expand"]').addEventListener('click', ()=>{
+      // mostrar todas las pestañas como “abiertas” simulando alternar por el usuario: simplemente quita hidden
+      tabPanels.forEach(p=> p.hidden = false);
+    });
+    panel.querySelector('[data-act="collapse"]').addEventListener('click', ()=>{
+      // dejar solo la pestaña activa visible
+      const active = panel.querySelector('.tabbtn.is-active')?.dataset.tab;
+      tabPanels.forEach(p=> p.hidden = (p.dataset.panel !== active));
+    });
+    panel.querySelector('[data-act="print"]').addEventListener('click', ()=>{
+      window.print();
+    });
+  }
+
+  // Menú: activar y renderizar
+  navBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      navBtns.forEach(b=>{ b.classList.toggle('is-active', b===btn); b.setAttribute('aria-selected', b===btn ? 'true':'false'); });
+      render(btn.dataset.target);
+    });
+  });
+
+  // Render inicial
+  render('mama');
+})();
+</script>
+
+
+
+
+<section id="prevencion" class="wrapper special reveal">
+  <div class="inner">
+    <header class="align-center">
+      <h2>Prevención</h2>
+      <p class="muted">Acciones que ayudan a reducir el riesgo en personas con predisposición hereditaria.</p>
+    </header>
+
+    <div class="pv-grid">
+      <!-- 1. Controles -->
+      <article class="pv-card">
+        <figure class="pv-media">
+          <img src="images/c1.jpeg" alt="Controles médicos periódicos">
+          <figcaption class="pv-chip">Controles</figcaption>
+          <div class="pv-gradient"></div>
+        </figure>
+        <div class="pv-body">
+          <h3>Controles médicos periódicos</h3>
+          <p>Identifican cambios sospechosos antes de que progresen. Incluyen examen clínico, imágenes y pruebas de laboratorio/genéticas.</p>
+        </div>
+      </article>
+
+      <!-- 2. Estilo de vida -->
+      <article class="pv-card">
+        <figure class="pv-media">
+          <img src="images/c2.jpg" alt="Hábitos y estilo de vida saludable">
+          <figcaption class="pv-chip">Estilo de vida</figcaption>
+          <div class="pv-gradient"></div>
+        </figure>
+        <div class="pv-body">
+          <h3>Hábitos saludables</h3>
+          <p>Dieta equilibrada, actividad física regular, peso adecuado y evitar tabaco, alcohol y ultraprocesados disminuyen el riesgo.</p>
+        </div>
+      </article>
+
+      <!-- 3. Cirugía preventiva -->
+      <article class="pv-card">
+        <figure class="pv-media">
+          <img src="images/c3.jpg" alt="Cirugía preventiva">
+          <figcaption class="pv-chip">Cirugía</figcaption>
+          <div class="pv-gradient"></div>
+        </figure>
+        <div class="pv-body">
+          <h3>Cirugía preventiva</h3>
+          <p>En casos seleccionados según guías clínicas, extirpa el órgano con mayor riesgo (p. ej., mastectomía u ooforectomía profiláctica).</p>
+        </div>
+      </article>
+
+      <!-- 4. Prevención farmacológica -->
+      <article class="pv-card">
+        <figure class="pv-media">
+          <img src="images/c4.jpg" alt="Prevención farmacológica">
+          <figcaption class="pv-chip">Fármacos</figcaption>
+          <div class="pv-gradient"></div>
+        </figure>
+        <div class="pv-body">
+          <h3>Prevención farmacológica</h3>
+          <p>En indicaciones precisas, ciertos medicamentos (p. ej., aspirina en CCR hereditario) reducen riesgo bajo control médico.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="pv-note">
+      <strong>Recordemos:</strong> la estrategia adecuada depende de edad, historia familiar, mutaciones y evaluación clínica. Consulta siempre con el equipo tratante.
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="reveal">
+    <div class="inner">
+      <p class="align-center m-0">© 2025 Nombre del Sitio — Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- JS base + Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/offcanvas.js"></script>
+
+  <!-- Interacciones (reveal, tabs, off-canvas) -->
+  <script>
+  (function(){
+    // Reveal
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+    else if ('IntersectionObserver' in window){
+      var io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.1,rootMargin:'0px 0px -10% 0px'});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    } else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+
+    // Tabs
+    var links=document.querySelectorAll('.tab-list a[data-tab]');
+    links.forEach(link=>{
+      link.addEventListener('click',e=>{
+        e.preventDefault();
+        var id=link.getAttribute('data-tab');
+        links.forEach(a=>{a.classList.toggle('active',a===link);a.setAttribute('aria-selected',a===link?'true':'false');});
+        document.querySelectorAll('.tabs .tab').forEach(p=>{var on=p.classList.contains(id);p.classList.toggle('active',on);p.hidden=!on;});
+      });
+    });
+
+    // Off-canvas (derecha)
+    var toggle=document.getElementById('navToggle'), panel=document.getElementById('menu'), close=panel?.querySelector('.offcanvas-close'), backdrop=document.getElementById('offcanvasBackdrop');
+    if(toggle && panel && backdrop){
+      var lastFocus=null, firstEl, lastEl;
+      var fs=()=>panel.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"]), input, select, textarea');
+      function trap(){var n=fs(); firstEl=n[0]; lastEl=n[n.length-1];}
+      function open(){lastFocus=document.activeElement; panel.classList.add('is-open'); panel.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','true'); backdrop.hidden=false; trap(); (firstEl||panel).focus({preventScroll:true}); document.body.style.overflow='hidden';}
+      function closeP(){panel.classList.remove('is-open'); panel.setAttribute('aria-hidden','true'); toggle.setAttribute('aria-expanded','false'); backdrop.hidden=true; document.body.style.overflow=''; lastFocus?.focus?.({preventScroll:true});}
+      toggle.addEventListener('click',()=> panel.classList.contains('is-open')?closeP():open());
+      close && close.addEventListener('click',closeP);
+      backdrop.addEventListener('click',closeP);
+      document.addEventListener('keydown',e=>{ if(!panel.classList.contains('is-open')) return; if(e.key==='Escape'){e.preventDefault();closeP();} if(e.key==='Tab'){trap(); if(!firstEl||!lastEl) return; if(e.shiftKey && document.activeElement===firstEl){e.preventDefault(); lastEl.focus();} else if(!e.shiftKey && document.activeElement===lastEl){e.preventDefault(); firstEl.focus();}}});
+      panel.querySelectorAll('a[href]').forEach(a=>a.addEventListener('click',closeP));
+    }
+    document.documentElement.style.scrollBehavior='smooth';
+  })();
+  </script>
+  <script>
+(function(){
+  const btn = document.getElementById('navToggle');
+  const panel = document.getElementById('menu');
+  const backdrop = document.getElementById('offcanvasBackdrop');
+  if(!btn || !panel || !backdrop){
+    console.log('Falta algún ID: navToggle / menu / offcanvasBackdrop');
+    return;
+  }
+  function open(){ panel.classList.add('is-open'); backdrop.hidden = false; }
+  function close(){ panel.classList.remove('is-open'); backdrop.hidden = true; }
+  btn.addEventListener('click', function(){
+    panel.classList.contains('is-open') ? close() : open();
+  });
+  backdrop.addEventListener('click', close);
+})();
+</script>
+<script>
+(function(){
+  var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  if (!isTouch) return; // en desktop basta con :hover
+
+  // En touch, el botón invisible .rc-hit alterna el panel
+  document.querySelectorAll('[data-reveal-card]').forEach(function(card){
+    var hit = card.querySelector('.rc-hit');
+    if (!hit) return;
+    hit.addEventListener('click', function(e){
+      e.preventDefault();
+      // Cerrar otras
+      document.querySelectorAll('[data-reveal-card].is-open').forEach(function(c){
+        if (c !== card) c.classList.remove('is-open');
+      });
+      card.classList.toggle('is-open');
+    }, {passive:false});
+  });
+
+  // Cerrar si se hace tap fuera
+  document.addEventListener('click', function(e){
+    var open = document.querySelector('[data-reveal-card].is-open');
+    if (!open) return;
+    if (!open.contains(e.target)) open.classList.remove('is-open');
+  });
+})();
+</script>
+<script>
+(function(){
+  var wrap = document.querySelector('[data-tabs]');
+  if(!wrap) return;
+
+  var list = wrap.querySelector('.treat-tablist');
+  var tabs = Array.from(wrap.querySelectorAll('.treat-tab'));
+  var ink  = wrap.querySelector('.treat-ink');
+  var panels = Array.from(wrap.querySelectorAll('.treat-panel'));
+
+  function activate(idx, focus){
+    tabs.forEach((t,i)=>{
+      var sel = i===idx;
+      t.classList.toggle('is-active', sel);
+      t.setAttribute('aria-selected', sel ? 'true':'false');
+      t.tabIndex = sel ? 0 : -1;
+    });
+    panels.forEach((p,i)=>{
+      var on = i===idx;
+      p.classList.toggle('is-active', on);
+      p.hidden = !on;
+    });
+    moveInk(idx);
+    if (focus) tabs[idx].focus({preventScroll:true});
+  }
+
+  function moveInk(idx){
+    var btn = tabs[idx];
+    var r = btn.getBoundingClientRect();
+    var rl = list.getBoundingClientRect();
+    var left = (r.left - rl.left) + list.scrollLeft;
+    ink.style.left = (left + 4) + 'px';
+    ink.style.width = (r.width - 8) + 'px';
+  }
+
+  // Click
+  tabs.forEach((t, i)=>{
+    t.addEventListener('click', function(){
+      activate(i, false);
+    });
+  });
+
+  // Teclado (← → Home End)
+  list.addEventListener('keydown', function(e){
+    var current = tabs.findIndex(t=>t.classList.contains('is-active'));
+    if (e.key === 'ArrowRight'){ e.preventDefault(); activate((current+1)%tabs.length, true); }
+    if (e.key === 'ArrowLeft'){  e.preventDefault(); activate((current-1+tabs.length)%tabs.length, true); }
+    if (e.key === 'Home'){ e.preventDefault(); activate(0, true); }
+    if (e.key === 'End'){  e.preventDefault(); activate(tabs.length-1, true); }
+  });
+
+  // Recalcular indicador en resize
+  window.addEventListener('resize', ()=>moveInk(tabs.findIndex(t=>t.classList.contains('is-active'))));
+  // Init
+  activate(0, false);
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('[data-tt]').forEach(function(card){
+    var btn = card.querySelector('.tt-more');
+    var panel = card.querySelector('.tt-details');
+    if(!btn || !panel) return;
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+    });
+  });
+})();
+</script>
+</body>
+</html>

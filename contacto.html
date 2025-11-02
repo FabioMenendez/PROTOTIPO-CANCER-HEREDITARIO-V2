@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Comunícate con el equipo del Proyecto Cáncer Hereditario." />
+  <title>Contáctanos — Proyecto Cáncer Hereditario</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- PARCHE: si el JS de reveal fallara, que igual se vea todo -->
+  <style>
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .offcanvas { visibility: visible; }
+  </style>
+</head>
+<body>
+
+  <header id="header" class="reveal">
+    <div class="inner d-flex align-items-center justify-content-between gap-3">
+      <h1 class="m-0"><a href="index.html" aria-label="Inicio">Nombre del Sitio <span>— Proyecto</span></a></h1>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <nav id="menu" class="offcanvas offcanvas-right" aria-label="Menú principal" aria-hidden="true">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title m-0">Menú</h2>
+      <button class="offcanvas-close" aria-label="Cerrar">×</button>
+    </div>
+    <ul class="links" role="menu">
+      <li role="none"><a role="menuitem" href="index.html">Inicio</a></li>
+      <li role="none"><a role="menuitem" href="quienes-somos.html">Quiénes Somos</a></li>
+      <li role="none"><a role="menuitem" href="contacto.html" aria-current="page">Contáctanos</a></li>
+    </ul>
+  </nav>
+  <div id="offcanvasBackdrop" class="offcanvas-backdrop" hidden></div>
+
+  <section id="banner" class="reveal">
+    <div class="inner text-center">
+      <header>
+        <h1 class="mb-1">Contáctanos</h1>
+        <p class="lead m-auto" style="max-width:70ch">Estamos aquí para ayudarte. Escríbenos y te responderemos pronto.</p>
+      </header>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="wrapper style1 reveal">
+      <div class="inner">
+        <div class="flex flex-2">
+          <!-- Formulario -->
+          <div class="col">
+            <form class="card p-3" id="contactForm" novalidate>
+              <!-- Antispam (colocados una sola vez, arriba del formulario) -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <input type="hidden" id="loadedAt" name="loadedAt">
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre completo</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Tu nombre" required>
+                <div class="invalid-feedback">Por favor, indica tu nombre.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="tu@correo.com" required>
+                <div class="invalid-feedback">Ingresa un correo válido.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="topic" class="form-label">Asunto</label>
+                <select id="topic" name="topic" class="form-select" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Información general</option>
+                  <option>Consulta clínica</option>
+                  <option>Colaboraciones</option>
+                </select>
+                <div class="invalid-feedback">Selecciona un asunto.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" name="message" class="form-control" rows="5" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                <div class="invalid-feedback">Escribe tu mensaje.</div>
+              </div>
+
+              <!-- Consentimiento (recomendado) -->
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                <label class="form-check-label" for="consent">
+                  Acepto la <a href="/politica-privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.
+                </label>
+                <div class="invalid-feedback">Debes aceptar para enviar.</div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+                <p class="text-muted m-0" id="formStatus" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Datos -->
+          <div class="col">
+            <div class="card p-3">
+              <h3>Información de contacto</h3>
+              <p class="mb-2"><strong>Correo:</strong> <a href="mailto:contacto@proyecto.org">contacto@proyecto.org</a></p>
+              <p class="mb-2"><strong>Teléfono:</strong> <a href="tel:+51010000000">+51 01 000 0000</a></p>
+              <p class="mb-3"><strong>Dirección:</strong> Calle Ejemplo 123, Lima, Perú</p>
+
+              <h4>Redes</h4>
+              <ul class="icons">
+                <li><a class="icon fa-twitter" href="#" aria-label="Twitter"></a></li>
+                <li><a class="icon fa-facebook" href="#" aria-label="Facebook"></a></li>
+                <li><a class="icon fa-instagram" href="#" aria-label="Instagram"></a></li>
+                <li><a class="icon fa-linkedin" href="#" aria-label="LinkedIn"></a></li>
+              </ul>
+            </div>
+
+            <div class="card mt-3 p-3">
+              <h3>Ubicación</h3>
+              <div class="round overflow-hidden border" style="height:260px">
+                <iframe title="Mapa" width="100%" height="100%" style="border:0"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-77.05%2C-12.1%2C-77.0%2C-12.03&layer=mapnik&marker=-12.07%2C-77.03">
+                </iframe>
+              </div>
+            </div>
+          </div><!-- /col -->
+        </div><!-- /flex -->
+      </div><!-- /inner -->
+    </section>
+  </main>
+
+  <footer id="footer" class="reveal">
+    <div class="inner"><p class="align-center m-0">© 2025 Nombre del Sitio — Todos los derechos reservados</p></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  (function(){
+    // ===== Reveal (con fallback ya aplicado en <style>) =====
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce && 'IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); }
+        })
+      }, { threshold:.1 });
+      document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+    }
+
+    // ===== Marca de tiempo para antispam =====
+    document.addEventListener('DOMContentLoaded', function(){
+      var loaded = document.getElementById('loadedAt');
+      if (loaded) loaded.value = String(Date.now());
+    });
+
+    // ===== Formulario =====
+    var form = document.getElementById('contactForm');
+    var status = document.getElementById('formStatus');
+
+    // util seguro
+    function qv(sel){
+      var el = form ? form.querySelector(sel) : null;
+      return (el && typeof el.value === 'string') ? el.value.trim() : '';
+    }
+    function hasName(n){ return !!(form && form.elements && typeof form.elements.namedItem==='function' && form.elements.namedItem(n)); }
+
+    if(form){
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+
+        if(!form.checkValidity()){
+          e.stopPropagation();
+          form.classList.add('was-validated');
+          status.textContent = 'Por favor, revisa los campos resaltados.';
+          return;
+        }
+
+        // Verifica que existan los name esperados
+        var missing = ['name','email','topic','message'].filter(function(n){ return !hasName(n); });
+        if (missing.length){
+          status.textContent = 'Falta(n) atributo(s) name en: ' + missing.join(', ');
+          return;
+        }
+
+        // Antispam
+        if (form._gotcha && form._gotcha.value) return;
+        var loadedAt = Number(form.loadedAt && form.loadedAt.value || 0);
+        if (Date.now() - loadedAt < 1500) { status.textContent='Un momento… vuelve a intentar.'; return; }
+
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) btn.disabled = true;
+        status.textContent = 'Enviando…';
+
+        var payload = {
+          name: qv('[name="name"]'),
+          email: qv('[name="email"]'),
+          topic: qv('[name="topic"]'),
+          message: qv('[name="message"]'),
+          consent: !!(form.querySelector('[name="consent"]') && form.querySelector('[name="consent"]').checked),
+          loadedAt: form.loadedAt ? form.loadedAt.value : ''
+        };
+
+        try{
+          var res = await fetch('contact.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          var data = {};
+          try { data = await res.json(); } catch(e){}
+
+          if (res.ok && data.ok){
+            form.reset();
+            form.classList.remove('was-validated');
+            status.textContent = '¡Mensaje enviado! Te responderemos pronto.';
+          } else {
+            status.textContent = (data && data.error) ? data.error : 'Ocurrió un error al enviar. Intenta nuevamente.';
+          }
+        } catch(err){
+          status.textContent = 'No hay conexión. Intenta más tarde.';
+        } finally {
+          if (btn) btn.disabled = false;
+          setTimeout(function(){ status.textContent=''; }, 5000);
+        }
+      }, false);
+    }
+
+    // ===== Off-canvas =====
+    var toggle = document.getElementById('navToggle'),
+        panel  = document.getElementById('menu'),
+        closeB = panel ? panel.querySelector('.offcanvas-close') : null,
+        backdrop = document.getElementById('offcanvasBackdrop');
+
+    if(toggle && panel && backdrop){
+      var last = null, first, lastF;
+      var fs = function(){ return panel.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"]),input,select,textarea'); };
+      function trap(){ var n=fs(); first=n[0]; lastF=n[n.length-1]; }
+      function open(){ last=document.activeElement; panel.classList.add('is-open'); panel.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','true'); backdrop.hidden=false; trap(); (first||panel).focus({preventScroll:true}); document.body.style.overflow='hidden'; }
+      function closeP(){ panel.classList.remove('is-open'); panel.setAttribute('aria-hidden','true'); toggle.setAttribute('aria-expanded','false'); backdrop.hidden=true; document.body.style.overflow=''; if(last && last.focus) last.focus({preventScroll:true}); }
+
+      toggle.addEventListener('click', function(){ panel.classList.contains('is-open') ? closeP() : open(); });
+      if (closeB) closeB.addEventListener('click', closeP);
+      backdrop.addEventListener('click', closeP);
+      document.addEventListener('keydown', function(e){
+        if(!panel.classList.contains('is-open')) return;
+        if(e.key==='Escape'){ e.preventDefault(); closeP(); }
+        if(e.key==='Tab'){
+          var n=fs();
+          first=n[0]; lastF=n[n.length-1];
+          if(e.shiftKey && document.activeElement===first){ e.preventDefault(); lastF.focus(); }
+          else if(!e.shiftKey && document.activeElement===lastF){ e.preventDefault(); first.focus(); }
+        }
+      });
+      panel.querySelectorAll('a[href]').forEach(function(a){ a.addEventListener('click', closeP); });
+    }
+
+    document.documentElement.style.scrollBehavior='smooth';
+  })();
+  </script>
+</body>
+</html>

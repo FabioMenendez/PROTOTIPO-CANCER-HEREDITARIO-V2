@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Historia, misión, visión, valores y equipo del proyecto." />
+  <title>Quiénes Somos — Proyecto Cáncer Hereditario</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header id="header" class="reveal">
+    <div class="inner d-flex align-items-center justify-content-between gap-3">
+      <h1 class="m-0"><a href="inicio.html" aria-label="Inicio">Nombre del Sitio <span>— Proyecto</span></a></h1>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <nav id="menu" class="offcanvas offcanvas-right" aria-label="Menú principal" aria-hidden="true">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title m-0">Menú</h2>
+      <button class="offcanvas-close" aria-label="Cerrar"></button>
+    </div>
+    <ul class="links" role="menu">
+      <li role="none"><a role="menuitem" href="index.html">Inicio</a></li>
+      <li role="none"><a role="menuitem" href="quienes-somos.html" aria-current="page">Quiénes Somos</a></li>
+      <li role="none"><a role="menuitem" href="contacto.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+  <div id="offcanvasBackdrop" class="offcanvas-backdrop" hidden></div>
+
+  <section id="banner" class="reveal">
+    <div class="inner text-center">
+      <header>
+        <h1 class="mb-1">Quiénes Somos</h1>
+        <p class="lead m-auto" style="max-width:70ch">Historia, misión, visión, valores y el equipo que lo hace posible.</p>
+      </header>
+      <a href="#historia" class="button big alt mt-3">Explorar</a>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Historia -->
+    <section id="historia" class="wrapper style1 reveal" data-accordion="historia">
+      <div class="inner">
+        <header class="align-center">
+          <h2>Historia del proyecto</h2>
+          <p>Hitos principales de nuestro camino.</p>
+          <div class="actions align-center mt-3">
+            <a class="button small" id="historia-expandir" href="javascript:void(0)">Expandir todo</a>
+            <a class="button small alt" id="historia-colapsar" href="javascript:void(0)">Colapsar todo</a>
+          </div>
+        </header>
+
+        <div class="timeline" role="list">
+          <article class="ti-item" role="listitem">
+            <h3><button class="ti-toggle" aria-expanded="false" aria-controls="ti-1962" id="btn-1962"><span class="ti-year">1962–2000</span> • Raíces y práctica</button></h3>
+            <div class="ti-content" id="ti-1962" role="region" aria-labelledby="btn-1962" hidden><p>Trabajo sostenido en salud pública y redes iniciales.</p></div>
+          </article>
+          <article class="ti-item" role="listitem">
+            <h3><button class="ti-toggle" aria-expanded="false" aria-controls="ti-2000" id="btn-2000"><span class="ti-year">2000–2010</span> • Convergencia One Health</button></h3>
+            <div class="ti-content" id="ti-2000" role="region" aria-labelledby="btn-2000" hidden><p>Integración de enfoques humano-animal-ambiente y alianzas intersectoriales.</p></div>
+          </article>
+          <article class="ti-item" role="listitem">
+            <h3><button class="ti-toggle" aria-expanded="false" aria-controls="ti-2010" id="btn-2010"><span class="ti-year">2010–2020</span> • Articulación docente-asistencial</button></h3>
+            <div class="ti-content" id="ti-2010" role="region" aria-labelledby="btn-2010" hidden><p>Puentes entre academia, servicios y territorio; programas formativos.</p></div>
+          </article>
+          <article class="ti-item" role="listitem">
+            <h3><button class="ti-toggle" aria-expanded="false" aria-controls="ti-2020" id="btn-2020"><span class="ti-year">2020–Presente</span> • Innovación y formación</button></h3>
+            <div class="ti-content" id="ti-2020" role="region" aria-labelledby="btn-2020" hidden><p>Proyectos con enfoque de equidad y tecnología aplicada.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Misión/Visión/Valores -->
+    <section id="mvv" class="wrapper style1 reveal">
+      <div class="inner">
+        <header class="align-center">
+          <h2>Misión, visión y valores</h2>
+          <p>Los principios que guían nuestro trabajo</p>
+        </header>
+
+        <div class="flex flex-3">
+          <div class="col">
+            <h3>Misión</h3>
+            <p>Nuestra razón de ser: impacto, evidencia y servicio a la comunidad.</p>
+          </div>
+          <div class="col">
+            <h3>Visión</h3>
+            <p>Ser referentes regionales en cáncer hereditario y formación.</p>
+          </div>
+          <div class="col">
+            <h3>Valores</h3>
+            <ul class="alt">
+              <li>Compromiso</li><li>Innovación</li><li>Colaboración</li><li>Transparencia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="wrapper style1 reveal">
+      <div class="inner">
+        <header class="align-center">
+          <h2>Equipo / Integrantes</h2>
+          <p>Las personas que hacen posible este proyecto</p>
+        </header>
+
+        <article class="member" data-name="Mev Dominguez-Valentin">
+          <div class="member-photo"><img loading="lazy" src="images/USUARIO.png" alt="Mev Dominguez-Valentin"></div>
+          <div class="member-body">
+            <h3 class="member-name">Nombre Apellido <span class="member-role">(Dirección)</span></h3>
+            <p class="member-lead">Investigadora en genética molecular. Lidera el grupo de Biología de Tumores en Oslo University Hospital.</p>
+          </div>
+        </article>
+
+        <article class="member">
+          <div class="member-photo"><img loading="lazy" src="images/USUARIO.png" alt="Integrante 2"></div>
+          <div class="member-body">
+            <h3 class="member-name">Nombre Apellido <span class="member-role">(Director Médico)</span></h3>
+            <p class="member-lead">Dermatólogo con experiencia clínica y publicaciones científicas.</p>
+          </div>
+        </article>
+
+        <article class="member">
+          <div class="member-photo"><img loading="lazy" src="images/USUARIO.png" alt="Integrante 3"></div>
+          <div class="member-body">
+            <h3 class="member-name">Nombre Apellido <span class="member-role">(Investigación)</span></h3>
+            <p class="member-lead">Especialista en investigación aplicada y análisis poblacional.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="wrapper style1 reveal">
+      <div class="inner">
+        <header class="align-center"><h2>Testimonios</h2></header>
+
+        <div class="tstn-carousel" aria-roledescription="carrusel">
+          <div class="tstn-track" role="list">
+            <article class="tstn-slide" role="group" aria-label="1 de 3">
+              <blockquote class="tstn-card">
+                <p>“Conectar evidencia con territorio transformó nuestra práctica.”</p>
+                <footer><img loading="lazy" src="images/USUARIO.png" alt=""><div><strong>Nombre Apellido</strong><span>Director Médico</span></div></footer>
+            </article>
+            <article class="tstn-slide" role="group" aria-label="2 de 3">
+              <blockquote class="tstn-card">
+                <p>“La articulación docente-asistencial impactó directamente en comunidades.”</p>
+                <footer><img loading="lazy" src="images/USUARIO.png" alt=""><div><strong>Nombre Apellido</strong><span>Director Médico</span></div></footer>
+              </blockquote>
+            </article>
+            <article class="tstn-slide" role="group" aria-label="3 de 3">
+              <blockquote class="tstn-card">
+                <p>“One Health cambió la forma de planificar e investigar.”</p>
+                <footer><img loading="lazy" src="images/USUARIO.png" alt=""><div><strong>Nombre Apellido</strong><span>Investigación</span></div></footer>
+              </blockquote>
+            </article>
+          </div>
+          <button class="tstn-prev" aria-label="Anterior">‹</button>
+          <button class="tstn-next" aria-label="Siguiente">›</button>
+          <div class="tstn-dots" role="tablist" aria-label="Paginación de testimonios"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="reveal">
+    <div class="inner"><p class="align-center m-0">© 2025 Nombre del Sitio — Todos los derechos reservados</p></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  (function(){
+    // Reveal
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+    else if ('IntersectionObserver' in window){
+      var io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.1});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    } else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+
+    // Acordeón historia
+    var root=document.querySelector('[data-accordion="historia"]'); if(root){
+      var items=root.querySelectorAll('.ti-item');
+      function setState(btn,panel,exp){btn.setAttribute('aria-expanded',String(exp)); panel.hidden=!exp;}
+      items.forEach(it=>{
+        var btn=it.querySelector('.ti-toggle'), panel=it.querySelector('.ti-content');
+        if(!btn||!panel) return; setState(btn,panel,false);
+        btn.addEventListener('click',()=>{setState(btn,panel, btn.getAttribute('aria-expanded')!=='true');});
+        btn.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();btn.click();}});
+      });
+      var ex=document.getElementById('historia-expandir'), col=document.getElementById('historia-colapsar');
+      ex && ex.addEventListener('click',()=>items.forEach(it=>setState(it.querySelector('.ti-toggle'),it.querySelector('.ti-content'),true)));
+      col && col.addEventListener('click',()=>items.forEach(it=>setState(it.querySelector('.ti-toggle'),it.querySelector('.ti-content'),false)));
+    }
+
+    // Equipo: aparición + lightbox simple
+    (function(){
+      var cards=[...document.querySelectorAll('#equipo .member')];
+      function light(src,alt){var o=document.createElement('div');o.className='team-lightbox';o.innerHTML='<button class="team-lightbox__close" aria-label="Cerrar">×</button><img src="'+src+'" alt="'+(alt||"Foto")+'">';document.body.appendChild(o);function c(){o.remove();document.removeEventListener('keydown',k);}function k(e){if(e.key==='Escape')c();}o.addEventListener('click',e=>{if(e.target===o)c();});o.querySelector('button').addEventListener('click',c);document.addEventListener('keydown',k);}
+      cards.forEach(c=>{var img=c.querySelector('img'); img && img.addEventListener('click',()=>light(img.src,img.alt));});
+      if('IntersectionObserver'in window){var ob=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('is-visible');ob.unobserve(en.target);}})},{threshold:.1}); cards.forEach(c=>ob.observe(c));} else cards.forEach(c=>c.classList.add('is-visible'));
+    })();
+
+    // Testimonios: carrusel + swipe
+    (function(){
+      var root=document.getElementById('testimonios'); if(!root) return;
+      var carousel=root.querySelector('.tstn-carousel'), track=root.querySelector('.tstn-track'), slides=[...root.querySelectorAll('.tstn-slide')], prev=root.querySelector('.tstn-prev'), next=root.querySelector('.tstn-next'), dots=root.querySelector('.tstn-dots');
+      var i=0, T=5000, timer=null, drag=false, sx=0,cx=0;
+      function aria(){slides.forEach((s,k)=>{s.setAttribute('aria-hidden',k===i?'false':'true'); s.setAttribute('aria-label',(k+1)+' de '+slides.length);}); dots.querySelectorAll('button').forEach((b,k)=>b.setAttribute('aria-selected',k===i?'true':'false'))}
+      function go(n,a){i=(n+slides.length)%slides.length; track.style.transition=(a!==false)?'transform .55s cubic-bezier(.2,.6,.2,1)':'none'; track.style.transform='translateX('+(-i*100)+'%)'; aria();}
+      function nxt(){go(i+1)} function prv(){go(i-1)}
+      slides.forEach((_,k)=>{var b=document.createElement('button');b.setAttribute('role','tab');b.setAttribute('aria-label','Ir a '+(k+1));b.addEventListener('click',()=>{go(k); rst();}); dots.appendChild(b);});
+      prev.addEventListener('click',()=>{prv(); rst();}); next.addEventListener('click',()=>{nxt(); rst();});
+      function start(){stop(); timer=setInterval(nxt,T)} function stop(){if(timer) clearInterval(timer),timer=null} function rst(){start()}
+      carousel.addEventListener('mouseenter',stop); carousel.addEventListener('mouseleave',start); carousel.addEventListener('focusin',stop); carousel.addEventListener('focusout',start);
+      function down(x){drag=true;sx=x;track.classList.add('grabbing');stop()} function move(x){if(!drag)return;cx=x;var d=cx-sx;track.style.transition='none';track.style.transform='translateX('+(-i*100+(d/track.clientWidth)*100)+'%)';} function up(){if(!drag)return;var d=cx-sx;drag=false;track.classList.remove('grabbing'); Math.abs(d)>track.clientWidth*0.2 ? (d<0?nxt():prv()) : go(i); start();}
+      track.addEventListener('mousedown',e=>down(e.clientX)); window.addEventListener('mousemove',e=>move(e.clientX)); window.addEventListener('mouseup',up);
+      track.addEventListener('touchstart',e=>down(e.touches[0].clientX),{passive:true}); track.addEventListener('touchmove',e=>move(e.touches[0].clientX),{passive:true}); track.addEventListener('touchend',up);
+      go(0,false); start();
+    })();
+
+    // Off-canvas
+    var toggle=document.getElementById('navToggle'), panel=document.getElementById('menu'), close=panel?.querySelector('.offcanvas-close'), backdrop=document.getElementById('offcanvasBackdrop');
+    if(toggle&&panel&&backdrop){
+      var last=null, first,lastF; var fs=()=>panel.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"]),input,select,textarea');
+      function trap(){var n=fs(); first=n[0]; lastF=n[n.length-1];}
+      function open(){last=document.activeElement; panel.classList.add('is-open'); panel.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','true'); backdrop.hidden=false; trap(); (first||panel).focus({preventScroll:true}); document.body.style.overflow='hidden';}
+      function closeP(){panel.classList.remove('is-open'); panel.setAttribute('aria-hidden','true'); toggle.setAttribute('aria-expanded','false'); backdrop.hidden=true; document.body.style.overflow=''; last?.focus?.({preventScroll:true});}
+      toggle.addEventListener('click',()=>panel.classList.contains('is-open')?closeP():open());
+      close && close.addEventListener('click',closeP);
+      backdrop.addEventListener('click',closeP);
+      document.addEventListener('keydown',e=>{if(!panel.classList.contains('is-open'))return; if(e.key==='Escape'){e.preventDefault();closeP();} if(e.key==='Tab'){trap(); if(e.shiftKey && document.activeElement===first){e.preventDefault();lastF.focus();} else if(!e.shiftKey && document.activeElement===lastF){e.preventDefault();first.focus();}}});
+      panel.querySelectorAll('a[href]').forEach(a=>a.addEventListener('click',closeP));
+    }
+  })();
+  </script>
+</body>
+</html>
